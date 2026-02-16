@@ -1,11 +1,19 @@
 // tests/login.spec.js
+// import Playwright's test and assertion libraries
 const { test, expect } = require("@playwright/test");
 
 // Increase default timeout for slow pages
+//Setting global timeout for all tests (60 seconds)
 test.setTimeout(60000);
 
+// Grouping related test cases into a test suite/collection
 test.describe("SauceDemo Login Page Tests", () => {
+
+  // beforeEach hook runs before every test case
   test.beforeEach(async ({ page }) => {
+
+    //Navigate to URLs with custom wait conditions
+    //domcontentloaded waits only for HTML to load, not all resources
     await page.goto("https://www.saucedemo.com/", {
       waitUntil: "domcontentloaded",
       timeout: 60000,
