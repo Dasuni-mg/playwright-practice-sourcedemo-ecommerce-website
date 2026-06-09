@@ -1,17 +1,23 @@
 // tests/login.spec.js
-const { test, expect } = require('@playwright/test');
-const LoginPage = require('../base/LoginPage');
-const users = require('../data/users');
+// import Playwright's test and assertion libraries
+const { test, expect } = require("@playwright/test");
 
 // Increase default timeout for slow pages
+//Setting global timeout for all tests (60 seconds)
 test.setTimeout(60000);
 
-test.describe('SauceDemo Login Page Tests', () => {
-  let loginPage;
+// Grouping related test cases into a test suite/collection
+test.describe("SauceDemo Login Page Tests", () => {
 
+  // beforeEach hook runs before every test case
   test.beforeEach(async ({ page }) => {
-    loginPage = new LoginPage(page);
-    await loginPage.open();
+
+    //Navigate to URLs with custom wait conditions
+    //domcontentloaded waits only for HTML to load, not all resources
+    await page.goto("https://www.saucedemo.com/", {
+      waitUntil: "domcontentloaded",
+      timeout: 60000,
+    });
   });
 
   test('TC001: Login page UI elements are visible', async () => {
