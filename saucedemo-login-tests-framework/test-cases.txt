@@ -1,0 +1,57 @@
+Platform: Sauce Demo E-commerce
+Domain: E-commerce web application
+
+Login.spec.js
+_______________________________________________________________________
+
+TC001: Login page UI elements are visible
+TC002: Login with valid credentials
+TC003: Login with invalid username and password
+TC004: Login with valid username and wrong password
+TC005: Login with invalid username and valid password
+TC006: Login with empty username and password
+TC007: Login with empty password
+TC008: Login with empty username
+TC009: Locked out user cannot login
+TC010: Problem user login succeeds but product images broken
+TC011: Performance glitch user login succeeds
+TC012: Password field should be masked
+TC013: Login button is always enabled, shows error when fields empty
+
+inventory.spec.js
+_______________________________________________________________________
+
+TC014: Inventory page UI validation
+TC015: All products display with details
+TC016: Sorting by Price Low to High works
+TC017: Sorting by Price High to Low works
+TC018: Sorting by Name A-Z works
+TC019: Sorting by Name Z-A works
+TC020: Add and remove products from cart
+TC021: Add multiple products updates cart badge correctly
+
+shoppingcart.spec.js
+_______________________________________________________________________
+
+TC022: Add single item to cart
+TC023: Add multiple items to cart
+TC024: Remove item from cart
+TC025: Cart persistence across pages
+TC026: Empty cart handling
+TC027: Cart quantity management
+
+checkout.spec.js
+_______________________________________________________________________
+
+TC028: Complete checkout process
+TC029: Checkout form validation
+TC030: Checkout overview displays product and total
+TC031: Order confirmation page validation
+
+
+navigation.spec.js
+_______________________________________________________________________
+
+TC032: Header navigation functionality
+TC033: Footer links validation
+
